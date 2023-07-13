@@ -16,6 +16,11 @@ public class EnemyBoard : Board
         for (int i = 0; i < 3; i++)
         {
             GameObject newCard = Object.Instantiate(referenceCard);
+
+            //Set owner
+            Card cardComponent = newCard.GetComponent<Card>();
+            cardComponent.owner = Card.Owner.Enemy;
+
             AddCard(newCard);
         }
 

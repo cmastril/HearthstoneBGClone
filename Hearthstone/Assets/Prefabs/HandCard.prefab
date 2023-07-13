@@ -432,6 +432,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7362860131228463704}
   - component: {fileID: 7362860131228463705}
+  - component: {fileID: 1458032082216688327}
+  - component: {fileID: 1574802661345248890}
   m_Layer: 0
   m_Name: HandCard
   m_TagString: Untagged
@@ -467,10 +469,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 503d1774481827147ba054ebe60d7e23, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageTaken:
+    m_PersistentCalls:
+      m_Calls: []
+  owner: 0
   location: 1
-  currentHealth: 0
-  maxHealth: 0
-  attack: 0
+  currentHealth: 1
+  maxHealth: 1
+  attack: 1
+--- !u!114 &1458032082216688327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362860131228463706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ea9d0bc06496d84d86cd126624eb73c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvasObject: {fileID: 2856186555428540787}
+--- !u!114 &1574802661345248890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7362860131228463706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5599d3610918249b4862400c367e35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthText: {fileID: 131538467628731750}
 --- !u!1 &8196672855159317260
 GameObject:
   m_ObjectHideFlags: 0

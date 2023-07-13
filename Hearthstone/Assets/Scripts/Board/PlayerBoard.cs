@@ -13,6 +13,11 @@ public class PlayerBoard : Board
     private void TestUnitLoad()
     {
         GameObject newCard = Object.Instantiate(referenceCard);
+
+        //Set owner
+        Card cardComponent = newCard.GetComponent<Card>();
+        cardComponent.owner = Card.Owner.Player;
+
         AddCard(newCard);
     }
 

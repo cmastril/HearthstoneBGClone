@@ -9,12 +9,13 @@ public class Board : MonoBehaviour
     [SerializeField] private Vector3 cardOffsetOnBoard;
 
     //Fields
-    public List<GameObject> cards = new List<GameObject>();
+    public List<GameObject> aliveCards = new List<GameObject>();
+    public List<GameObject> deadCards = new List<GameObject>();
 
     public void AddCard(GameObject cardObject)
     {
         //Add card to list
-        cards.Add(cardObject);
+        aliveCards.Add(cardObject);
 
         //Update Card Data
         Card card = cardObject.GetComponent<Card>();
@@ -25,7 +26,7 @@ public class Board : MonoBehaviour
 
     private void MoveCard(GameObject cardObject)
     {
-        int totalCards = cards.Count;
+        int totalCards = aliveCards.Count;
         Vector3 leftMost = leftMostPlayerBoardReferenceObject.transform.position;
 
         Vector3 newPosition = (cardOffsetOnBoard * totalCards) + leftMost;
